@@ -59,6 +59,8 @@ public final class BasicHttpParams extends AbstractHttpParams
 
     public BasicHttpParams() {
         super();
+        setParameter("http.connection.timeout", Integer.valueOf(5000));
+        setParameter("http.socket.linger", Integer.valueOf(1));
     }
 
     public Object getParameter(final String name) {
